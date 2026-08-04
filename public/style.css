@@ -1,0 +1,53 @@
+:root{
+  --bg:#ffffff;
+  --text:#1f2937;
+  --muted:#f8fafc;
+  --primary:#7c3aed;
+  --primary-dark:#6d28d9;
+  --border:#e5e7eb;
+  --soft:#f5f3ff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.65;
+}
+.container{width:min(1140px,92%);margin:0 auto}
+.site-header{
+  position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid var(--border);
+}
+.nav-wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 0}
+.logo{text-decoration:none;color:var(--text);font-size:1.2rem;font-weight:800}
+.nav-links{list-style:none;display:flex;flex-wrap:wrap;gap:14px;margin:0;padding:0}
+.nav-links a{text-decoration:none;color:#374151;font-weight:600}
+.nav-links a:hover,.footer-wrap a:hover,.read-more:hover{color:var(--primary)}
+.hero{padding:56px 0;background:var(--soft)}
+.hero-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:28px;align-items:center}
+.hero h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.12;margin:0 0 14px}
+.eyebrow{color:var(--primary);font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:.85rem}
+.hero img{width:100%;border-radius:16px;border:1px solid var(--border);box-shadow:0 12px 30px rgba(15,23,42,.12)}
+.section{padding:56px 0}
+.muted{background:var(--muted)}
+.article{max-width:900px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:20px;margin-top:24px}
+.card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:14px}
+.card img{width:100%;height:185px;object-fit:cover;border-radius:10px;margin-bottom:10px}
+.read-more{text-decoration:none;color:var(--primary);font-weight:800}
+.contact-form{max-width:640px;display:grid;gap:10px;margin-top:16px}
+input,textarea{width:100%;padding:11px;border:1px solid #d1d5db;border-radius:8px;font:inherit}
+.btn{
+  display:inline-block;width:fit-content;background:var(--primary);color:#fff;text-decoration:none;
+  border:none;padding:11px 18px;border-radius:8px;font-weight:800;cursor:pointer;
+}
+.btn:hover{background:var(--primary-dark)}
+.site-footer{border-top:1px solid var(--border);padding:20px 0;background:#fff}
+.footer-wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.footer-wrap a{text-decoration:none;color:#374151;font-weight:600}
+.legal{max-width:900px}
+@media (max-width:860px){
+  .hero-grid{grid-template-columns:1fr}
+  .nav-wrap{align-items:flex-start;flex-direction:column}
+}
